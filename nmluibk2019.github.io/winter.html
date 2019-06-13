@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tourismusinformationen Winter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.5.0/dist/leaflet.js"></script>
+
+    <!-- leaflet fullscreen -->
+    <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
+    <link href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css" rel="stylesheet" />
+
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <link href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" rel="stylesheet" />
+    <link href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" rel="stylesheet" />
+
+    <!-- leaflet minmap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.min.css"rel="stylesheet" />
+    
+    <!-- leaflet search -->
+    <script src="plugins/dist/leaflet-search.min.js"></script>
+    <link href="plugins/dist/leaflet-search.min.css" rel="stylesheet" />
+
+    <!-- Koordinaten einfügen -->
+    <link href="plugins/dist/Control.Coordinates.css" rel= "stylesheet">
+    <script src="plugins/dist/Control.Coordinates.js"></script>
+
+
+    <!-- GeoJson einbinden -->
+    <script src ="Lifte.js" ></script>
+    <script src ="Pisten.js" ></script>
+
+    <!-- pern.map -->
+    <link rel="stylesheet" type="text/css" media="screen" href="winter.css">
+    <script defer src="winter.js"></script>
+  
+</head>
+<body>
+ 
+
+    <header>
+        <h2>Winterinformationen zum Salzburger Land</h2><br>
+        <h3>Informationen zum Winter-Tourismus im Salzburger Land</h3>
+    </header>
+    
+    <a href= "index.html">Zurück zur Startseite</a><br>
+    <a href = "sommer.html">Informationen zum Sommertourismus</a>
+    <div class="author">
+        
+
+        <address>
+            <a href="mailto:leonie_waechter@live.de">Leonie Wächter</a>
+            <a href="mailto:Mery.Pocrnja@student.uibk.ac.at">Mery Pocrnja</a>
+            <a href="mailto:Nicolas.metz@student.uibk.ac.at">Nicolas Metz</a>
+        </address>
+    </div>
+    <div id= "map" ></div>
+
+</body>
+</html>
