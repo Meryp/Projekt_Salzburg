@@ -110,8 +110,8 @@ karte.fitBounds(LifteCluster.getBounds());
 karte.addLayer(LifteCluster);
 
 
-        layerControl.addOverlay(pistenGroup, "Pisten")
-        layerControl.addOverlay(lifteGroup, "Lifte")
+        layerControl.addOverlay(pistenGroup, '<img src="icons/skiing.png"> Pisten')
+        layerControl.addOverlay(lifteGroup, '<img src="icons/skilifting.png"> Lifte')
 
         //PlugIns Fullscreen, Maßstab, Minimap, Suchfeld
 
