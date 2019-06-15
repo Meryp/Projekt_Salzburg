@@ -9,10 +9,11 @@ const titel = div.getAttribute("data-title");
 //console.log("Breite="breite,"Länge="laenge,"Titel=",title)
 
 //Karte initialisieren
-let karte = L.map("map");
+let karte = L.map('map', {
+    center: [47.809, 13.055],
+    zoom: 15.5
+});
 
-//auf Ausschnitt zoomen
-karte.setView([47.80949, 13.05501], 13);
 
 //gewünschte Kartenlayer einbauen
 const kartenLayer = {
@@ -142,7 +143,53 @@ L.geoJson(BADE)
 .bindPopup(function(layer,properties){
     return`
     <h4>${layer.feature.properties.NAME}</h4><hr>
-    Badestellenart:${layer.feature.properties.TYP_BEZ}<br>
+    Badestellenart: ${layer.feature.properties.TYP_BEZ}<br>
     `;
 }).addTo(karte);
+
+
+
+let radverleih = L.marker([47.80298454, 13.0297052],{
+    icon: L.icon({
+        iconUrl: "icons/bikeinfo.png",
+        iconSize:     [30, 30], 
+        iconAnchor:   [12, 12], 
+        popupAnchor:  [0, 0] 
+        })
+
+}).addTo(karte).bindPopup(`<h4> Avelo Räder, E-Bikes, Service, Verleih <hr>
+Standort: Willibald-Hauthaler-Str. 10<p>
+Telefon: +43 (0)662 4355950 <hr> 
+Email: avelo@aon.at 
+</h4>`);
+
+
+let stationambahnhof = L.marker([47.81202821, 13.04644689],{
+    icon: L.icon({
+        iconUrl: "icons/bikeinfo.png",
+        iconSize:     [30, 30], 
+        iconAnchor:   [12, 12], 
+        popupAnchor:  [0, 0] 
+        })
+
+}).addTo(karte).bindPopup(`<h4>Self-Service-Station <hr> 
+Standort: Bike & Ride Hauptbahnhof - Zugang Schallmoos
+Telefon: +43 (0)662 8072 2735
+</h4>`);
+
+let radverleiharenberg = L.marker ([47.80096128, 13.06159699],{
+    icon: L.icon({
+        iconUrl: "icons/bikeinfo.png",
+        iconSize:     [30, 30], 
+        iconAnchor:   [12, 12], 
+        popupAnchor:  [0, 0] 
+        })
+}).addTo (karte).bindPopup(`<h4> Hotel Haus Arenberg / Movelo Pedelecverleih <hr>
+Standort: Blumensteinstraße 8<p>
+Telefon: +43(0)662 6400970 <hr>
+Email: info@arenberg-salzburg.at
+</h4>`); 
+
+
+
 
